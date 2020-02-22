@@ -4,22 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controller
+class UsersController extends Controller
 {
-    public function auth(Request $request) {
-        $credentials = $request->only('username', 'password');
-        $result = [];
-        if (Auth::attempt($credentials,  $request->get('remember'))) {
-            $result = ['err' => false, 'msg' => ''];
-        }
-        else {
-            $result = ['err' => true, 'msg' => __('auth.failed')];
-        }
-        print json_encode($result);
-    }
-
     /**
      * Display a listing of the resource.
      *

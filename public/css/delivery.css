@@ -1,0 +1,10 @@
+.login-panel {
+    margin: -200px 0px 0px -200px;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+}
+
+.login-panel img {
+    max-height: 70px;
+}
